@@ -1,1 +1,26 @@
+* {
+
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
 @import "tailwindcss";
+
+
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+@media(min-width:1536px) {
+    .inner-Width {
+        max-width: 1280px;
+        margin: auto;
+    }
+}
+
+@media (min-Width:1280px),
+(min-Width:768px) {
+    .paddings {
+        padding: 2rem;
+    }
+}

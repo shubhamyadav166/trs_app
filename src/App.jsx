@@ -12,7 +12,7 @@ function App() {
 
 
   return (
-    <>
+    <div className='inner-Width'>
       <Navbar />
       <Routes>
 
@@ -24,7 +24,7 @@ function App() {
 
       </Routes>
       <Footer />
-    </>
+    </div>
   )
 }
 
