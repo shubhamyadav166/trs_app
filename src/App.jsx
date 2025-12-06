@@ -12,7 +12,7 @@ function App() {
 
 
   return (
-    <div className='inner-Width'>
+    <div className='inner-Width relative'>
       <Navbar />
       <Routes>
 

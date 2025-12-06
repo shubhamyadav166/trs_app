@@ -16,12 +16,13 @@ const Navbar = () => {
     return (
         <>
 
-            <div>
+            <div className='relative z-20 pt-5'>
+
                 {/* Desktop */}
-                <div className='hidden sm:flex flex-row justify-around mt-7 text-xl items-center w-full px-10'>
+                <div className='hidden sm:flex flex-row justify-around text-xl items-center w-full px-10'>
                     <div className='w-1/2'><img className='h-15 w-45' src="/logo(1).png" alt="" /> </div>
                     <div>
-                        <ul className='flex justify-around gap-10 w-1/2'>
+                        <ul className='flex justify-around gap-15 w-1/2'>
 
                             <li className='hover:text-yellow-300'><NavLink to="/">Home</NavLink></li>
                             <li className='hover:text-yellow-300'><NavLink to="/about">About</NavLink></li>
@@ -33,14 +34,15 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-row justify-between items-center p-7 sm:hidden bg-white text-black'>
+                {/* Mobile */}
+                <div className='flex flex-row justify-between items-center p-4 sm:hidden text-black'>
                     <div className='items-center'><img className='h-15 w-45' src="/logo(1).png" alt="Brand logo" /></div>
                     <div className='text-xl'> {show ? <span onClick={handleClick}><CiMenuBurger /></span> : <span onClick={handleClick}><RxCross1 /></span>}</div>
                 </div>
-                {/* Mobile */}
 
 
-                <ul className={`flex flex-col text-black bg-white p-10 gap-10 absolute h-screen transition-all duration-700 ${isVisble ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}>
+                {/* Mobile menu slider when click hamberger icon */}
+                <ul className={`flex flex-col text-black bg-white p-10 gap-10 absolute h-screen transition-all duration-700 ${isVisble ? "z-20 translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}>
                     <li className='hover:text-yellow-300' onClick={handleClick}><NavLink className={({ isActive }) =>
                         isActive
                             ? "#0B2C3D text-[#641bda]  px-3 py-1 rounded "
