@@ -6,7 +6,7 @@ const Home = () => {
         <>
             <div className=" w-full overflow-hidden ">
                 {/* Background Video */}
-                <div className='-h-screen sm:h-screen'>
+                <div className='sm:h-screen'>
                     <video
                         className="absolute top-0 w-full h-[100vh] hidden sm:block m-auto object-cover"
                         src="/home.video.mp4"
@@ -15,6 +15,7 @@ const Home = () => {
                         muted
                         playsInline
                     ></video>
+                    <h2 className='absolute hidden'>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas a qui autem, ad necessitatibus amet esse voluptate aut ullam nam laborum iste quos maiores quas delectus officia! Blanditiis, ad sint.</h2>
                 </div>
                 {/* Home Content */}
 
