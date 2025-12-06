@@ -42,7 +42,7 @@ const Navbar = () => {
 
 
                 {/* Mobile menu slider when click hamberger icon */}
-                <ul className={`flex flex-col text-black bg-white p-10 gap-10 absolute h-screen transition-all duration-700 ${isVisble ? "z-20 translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}>
+                <ul className={`flex flex-col text-black bg-white p-10 top-25 gap-10 absolute h-screen transition-all duration-700 ${isVisble ? "z-20 translate-x-0 opacity-100" : "-translate-x-full opacity-0"}`}>
                     <li className='hover:text-yellow-300' onClick={handleClick}><NavLink className={({ isActive }) =>
                         isActive
                             ? "#0B2C3D text-[#641bda]  px-3 py-1 rounded "
