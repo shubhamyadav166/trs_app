@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { HiLocationMarker } from 'react-icons/hi'
 
+
 const Home = () => {
     return (
         <>
@@ -10,7 +11,7 @@ const Home = () => {
                 <div className='h-100 sm:h-screen relative'>
                     <video
                         className="h-80 sm:w-full sm:h-[90vh] w-full object-cover"
-                        src="/home.video.mp4"
+                        src="./trs_home_video.mp4"
                         autoPlay
                         loop
                         muted
