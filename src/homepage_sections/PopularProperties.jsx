@@ -48,8 +48,8 @@ const PopularProperties = () => {
                         data.map((card, i) => (
 
                             <SwiperSlide key={i} className='py-10 px-10 hover:bg-blue-100 rounded-3xl relative' >
-                                <div className="slide-content items-center"><img src={card.image} className='rounded-3xl' alt="" />
-                                    <p>{card.price}</p>
+                                <div className="slide-content items-center"><img src={card.image} className='rounded-3xl hover:scale-[1.1]' alt="" />
+                                    <p className='mt-4'>{card.price}</p>
                                     <h1>{card.name}</h1>
                                     <p className='absolute top-15 left-15 bg-black/40 text-white rounded-2xl p-1 px-2'>resale</p>
                                 </div>
