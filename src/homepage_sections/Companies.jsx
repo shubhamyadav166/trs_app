@@ -6,7 +6,7 @@ import "swiper/css";
 
 const Companies = () => {
     return (
-        <div className="mt-1 bg-black/20 pb-10">
+        <div className="mt-1  pb-10">
             <h2 className="text-center text-[#121627] md:text-4xl font-bold mb-10">
                 Our Partners
             </h2>

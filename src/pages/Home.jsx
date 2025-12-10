@@ -20,7 +20,7 @@ const Home = () => {
                         muted
                     ></video>
 
-                    <div className='absolute top-20 left-0 sm:w-3/4 sm:left-20 w-full flex justify-center items-center md:left-30 sm:top-50 md:top-60 md:w-4/5  text-white bg-black/40'>
+                    <div className='absolute top-20 left-0 sm:w-3/4 sm:left-20 w-full flex justify-center items-center md:left-30 sm:top-50 md:top-60 md:w-4/5  text-white bg-black/40 rounded-2xl'>
                         <div className='flex flex-col justify-around px-5 py-5 gap-2'>
                             <div className='flex justify-center'>
                                 <div className='text-2xl sm:gap-3 sm:text-5xl font-bold flex flex-col lg:flex-row justify-center relative'>

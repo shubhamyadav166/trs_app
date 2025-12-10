@@ -16,11 +16,12 @@ const PopularProperties = () => {
         <div className='mt-15'>
             <div className='w-full text-center'>
                 <span className='text-orange-400 md:text-2xl'>Best Choice</span>
-                <h1 className='text-[#121627] text-2xl md:text-3xl font-bold'>Popular Residencies</h1>
+                <h1 className='text-[#121627] text-2xl md:text-3xl font-bold'>Featured Property</h1>
             </div>
-            <div className='m-5 p-5'>
+            <div className='mt-10 px-15 lg:px-30'>
+                <div className="custom-next swiper-button-next "></div>
+                <div className="custom-prev swiper-button-prev "></div>
                 <Swiper modules={[Navigation, Pagination, Autoplay]}
-
 
                     // Basic configuration
                     spaceBetween={16}
@@ -31,12 +32,15 @@ const PopularProperties = () => {
                     breakpoints={{
                         640: { slidesPerView: 2 },
                         768: { slidesPerView: 3 },
-                        1024: { slidesPerView: 4 },
+                        1024: { slidesPerView: 3 },
                     }}
 
                     // Navigation arrows (prev/next)
-                    navigation
 
+                    navigation={{
+                        nextEl: ".custom-next",
+                        prevEl: ".custom-prev",
+                    }}
                     // Pagination (dots)
                     pagination={{ clickable: true }}
 
@@ -44,17 +48,19 @@ const PopularProperties = () => {
                     // Looping
                     loop={true}>
 
+
                     {
 
                         popularProperty.map((card, i) => (
 
-                            <SwiperSlide key={i} className='py-5 px-10 hover:bg-slate-50 rounded-3xl relative cursor-pointer' >
+                            <SwiperSlide key={i} className=' bg-slate-50 border-2 border-slate-400 rounded-2xl relative cursor-pointer' >
                                 <Link to={`/property/${card.id}`} key={card.id}>
-                                    <div className="slide-content items-center"><img src={card.image} className='rounded-3xl ' alt="" />
-                                        <p className='mt-4'>{card.price}</p>
-                                        <h1>{card.name}</h1>
-                                        <p>{card.id}</p>
-                                        <p className='absolute top-15 left-15 bg-black/40 text-white rounded-2xl p-1 px-2'>resale</p>
+                                    <div className="slide-content items-center"><img src={card.image} className="rounded-4xl w-full p-5 h-60 object-cover " />
+                                        <p className='pl-6'>{card.price}</p>
+                                        <h1 className='pl-6'>{card.name}</h1>
+                                        <p className='pl-6'>{card.id}</p>
+                                        <p className='absolute top-10 left-10 bg-black/40 text-white rounded-2xl p-1 px-2'>resale</p>
+                                        <h className=" absolute top-45 left-10  text-white rounded-2xl text-2xl font-bold"> 5.6 Cr Onwards</h>
                                     </div>
                                 </Link>
                             </SwiperSlide>

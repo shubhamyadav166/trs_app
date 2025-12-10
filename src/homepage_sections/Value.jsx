@@ -13,7 +13,7 @@ import { data } from "../../utils/accordion"
 const Value = () => {
     return (
         <section>
-            <div className='flex flex-col justify-around md:flex-row  '>
+            <div className='flex flex-col justify-around md:flex-row mt-10 '>
                 {/* left section */}
                 <div className='w-full items-center bg-slate-50' >
                     <div className='hidden md:flex  md:justify-center md:items-center w-full h-full'>

@@ -5,7 +5,6 @@ import { RxCross1 } from "react-icons/rx";
 import { NavLink } from 'react-router-dom';
 import { FiChevronDown } from "react-icons/fi";
 
-
 const Navbar = () => {
     const [show, setShow] = useState(true)
     const [propertyOpen, setPropertyOpen] = useState(false)
