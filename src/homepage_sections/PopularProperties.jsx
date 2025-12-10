@@ -1,11 +1,12 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Link } from "react-router-dom"
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { data } from '../../utils/properties.js'
+import { popularProperty } from '../../utils/properties.js'
 
 const PopularProperties = () => {
     let prev = document.querySelector("swiper-navigation-icon")
@@ -45,21 +46,24 @@ const PopularProperties = () => {
 
                     {
 
-                        data.map((card, i) => (
+                        popularProperty.map((card, i) => (
 
-                            <SwiperSlide key={i} className='py-5 px-10 hover:bg-slate-50 rounded-3xl relative' >
-                                <div className="slide-content items-center"><img src={card.image} className='rounded-3xl ' alt="" />
-                                    <p className='mt-4'>{card.price}</p>
-                                    <h1>{card.name}</h1>
-                                    <p className='absolute top-15 left-15 bg-black/40 text-white rounded-2xl p-1 px-2'>resale</p>
-                                </div>
+                            <SwiperSlide key={i} className='py-5 px-10 hover:bg-slate-50 rounded-3xl relative cursor-pointer' >
+                                <Link to={`/property/${card.id}`} key={card.id}>
+                                    <div className="slide-content items-center"><img src={card.image} className='rounded-3xl ' alt="" />
+                                        <p className='mt-4'>{card.price}</p>
+                                        <h1>{card.name}</h1>
+                                        <p>{card.id}</p>
+                                        <p className='absolute top-15 left-15 bg-black/40 text-white rounded-2xl p-1 px-2'>resale</p>
+                                    </div>
+                                </Link>
                             </SwiperSlide>
 
                         ))
                     }
                 </Swiper>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }
 
