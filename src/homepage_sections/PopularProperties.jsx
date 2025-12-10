@@ -12,10 +12,10 @@ const PopularProperties = () => {
     console.log(prev);
 
     return (
-        <div>
-            <div className=' m-5 pl-15'>
+        <div className='mt-15'>
+            <div className='w-full text-center'>
                 <span className='text-orange-400 md:text-2xl'>Best Choice</span>
-                <h1 className='text-[#121627] md:text-3xl font-bold'>Popular Residencies</h1>
+                <h1 className='text-[#121627] text-2xl md:text-3xl font-bold'>Popular Residencies</h1>
             </div>
             <div className='m-5 p-5'>
                 <Swiper modules={[Navigation, Pagination, Autoplay]}
@@ -47,8 +47,8 @@ const PopularProperties = () => {
 
                         data.map((card, i) => (
 
-                            <SwiperSlide key={i} className='py-10 px-10 hover:bg-blue-100 rounded-3xl relative' >
-                                <div className="slide-content items-center"><img src={card.image} className='rounded-3xl hover:scale-[1.1]' alt="" />
+                            <SwiperSlide key={i} className='py-5 px-10 hover:bg-slate-50 rounded-3xl relative' >
+                                <div className="slide-content items-center"><img src={card.image} className='rounded-3xl ' alt="" />
                                     <p className='mt-4'>{card.price}</p>
                                     <h1>{card.name}</h1>
                                     <p className='absolute top-15 left-15 bg-black/40 text-white rounded-2xl p-1 px-2'>resale</p>

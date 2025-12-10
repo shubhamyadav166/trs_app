@@ -52,8 +52,9 @@ const Home = () => {
                 <div >  <PopularProperties /></div>
                 {/* values section */}
                 <div><Value /></div>
-
+                {/* Companies section */}
                 <div className=' p-5 pt-10'>  <Companies /></div>
+
             </div >
         </>
     )
