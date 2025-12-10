@@ -5,8 +5,11 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Blogs from './pages/Blogs'
-import Projects from './pages/Projects'
+import Property from './pages/Property'
 import PropertyPage from './pages/PropertyPage'
+import Residential from './pages/Residential'
+import Commercial from './pages/Commercial'
+import Plots from './pages/Plots'
 
 
 function App() {
@@ -21,8 +24,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/projects" element={<Projects />} />
+
         <Route path="/property/:id" element={<PropertyPage />} />
+        <Route path="/residential" element={<Residential />} />
+        <Route path="/commercial" element={<Commercial />} />
+        <Route path="/plots" element={< Plots />} />
+
 
 
       </Routes>
