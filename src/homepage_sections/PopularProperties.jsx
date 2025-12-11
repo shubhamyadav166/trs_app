@@ -1,4 +1,5 @@
 import React from 'react'
+import { HiLocationMarker } from 'react-icons/hi'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Link } from "react-router-dom"
@@ -6,7 +7,7 @@ import { Link } from "react-router-dom"
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { popularProperty } from '../../utils/properties.js'
+import { popularProperty } from '../../utils/properties'
 
 const PopularProperties = () => {
     let prev = document.querySelector("swiper-navigation-icon")
@@ -56,11 +57,12 @@ const PopularProperties = () => {
                             <SwiperSlide key={i} className=' bg-slate-50 border border-slate-400 rounded-2xl relative cursor-pointer' >
                                 <Link to={`/property/${card.id}`} key={card.id}>
                                     <div className="slide-content items-center"><img src={card.image} className="rounded-4xl w-full p-5 h-60 object-cover " />
-                                        <p className='pl-6'>{card.price}</p>
-                                        <h1 className='pl-6'>{card.name}</h1>
+
+                                        <h1 className='pl-6 text-slate-800 text-2xl lg:text-[20px]'>{card.name}</h1>
+                                        <h1 className='pl-6 flex flex-row gap-2 mt-2 '><HiLocationMarker className='mt-1' /> {card.location}</h1>
                                         <p className='pl-6'>{card.id}</p>
                                         <p className='absolute top-10 left-6 bg-black/40 text-white rounded-2xl p-1 px-2'>resale</p>
-                                        <h className=" absolute top-45 left-6  text-white rounded-2xl text-2xl font-bold"> 5.6 Cr Onwards</h>
+                                        <h className=" absolute top-45 left-6  text-white rounded-2xl text-2xl font-bold"> {card.price}</h>
                                     </div>
                                 </Link>
                             </SwiperSlide>
